@@ -534,11 +534,12 @@ section .title {
 
 
 .contact .contact-content .column {
-    width: calc(50% - 30px);
+    /* width: calc(50% - 30px); */
     margin: auto;
-    border: solid 0.5px;
-    padding:50px;
-    box-shadow: 6px 6px 8px 3px;
+    /* border: solid 0.5px; */
+    padding:0 50px 50px 50px;
+    
+    /* box-shadow: 6px 6px 8px 3px; */
 }
 
 .contact .contact-content .text {
@@ -553,6 +554,15 @@ section .title {
 
 .contact .contact-content .left .icons {
     margin: 10px 0;
+}
+
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /* gap:30px; */
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .contact .contact-content .row {
@@ -618,11 +628,12 @@ section .title {
 }
 .card-content{
     position:relative;
+    width: 100%;
 }
 
 .woman-dancing-2{
     position:absolute;
-    right:2px;
+    right: translateX(50%);
     bottom:0;
 }
 .woman-dancing-2 img{
@@ -707,6 +718,19 @@ footer span a:hover {
     text-decoration: underline;
 }
 
+.item22{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* --bs-gutter-x: 1.5rem; */
+    /* --bs-gutter-y: 0; */
+    padding: 3px;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+    height: 100px;
+}
 
 /* responsive media query start */
 
@@ -838,6 +862,7 @@ footer span a:hover {
     .services .serv-content .card {
         width: 100%;
     }
+
 }
 
 @media (max-width: 500px) {
@@ -872,6 +897,17 @@ footer span a:hover {
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+
+    .icons{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        gap:30px;
+    }
+    .woman-dancing-2{
+        display: none;
     }
 }
 
@@ -984,6 +1020,13 @@ progress {
 @media (min-width: 1200px) {
     .display-1 {
         font-size: 5rem;
+    }
+    .contact{
+        padding: 0!important;
+    }
+    .change-gap{
+        padding: 0 0 80px 0;
+        /* position: absolute; */
     }
 }
 
@@ -5698,4 +5741,43 @@ fieldset:disabled .btn {
     /* padding-left: 20px; */
     /* margin: 0 auto; */
     /* margin: 0 auto; */
+}
+
+i{
+    font-size: 2rem;
+    color:'#ffb700'!important;
+
+    box-shadow: 0px 0px 2px gray;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.fa-envelope, .fa-phone, .fa-linkedin{
+    color: #333333;
+}
+
+.fa-envelope:hover, .fa-phone:hover, .fa-linkedin:hover{
+    color:  orange;
+    cursor: pointer;
+}
+
+.last-title-ever{
+    margin-bottom: 0px!important;
+}
+
+.title-about-me{
+    text-align: left!important;
+    margin-bottom: 15px!important;
+}
+
+.me-img{
+    border-radius: 50%!important;
+    width: 250px!important;
+    height: 250px!important;
+    border: 3px solid orange;
+
+    /* margin: 0 auto; */
+    /* display: block; */
+    box-shadow: 0px 0px 2px gray;
 }
